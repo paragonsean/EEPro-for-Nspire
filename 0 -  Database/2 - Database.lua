@@ -111,6 +111,11 @@ addSubCat(2, 3, "Curvature", "")
 aF(2, 3, "R=abs((1+yp^2)^(3/2)/ypp)", U("R","yp","ypp"))
 aF(2, 3, "ypp=abs((1+yp^2)^(3/2)/R)", U("ypp","yp","R"))
 
+addSubCat(2, 4, "Logarithmic Derivative", "")
+aF(2, 4, "fp=k/x", U("fp","k","x"))
+aF(2, 4, "k=fp*x", U("k","fp","x"))
+aF(2, 4, "x=k/fp", U("x","k","fp"))
+
 
 addCat(3, "Integrals", "Integration formulas and applications")
 
@@ -119,6 +124,10 @@ addCatVar(3, "b", "Upper limit", "unitless")
 addCatVar(3, "n", "Exponent", "unitless")
 addCatVar(3, "I", "Integral value", "unitless")
 addCatVar(3, "k", "Constant", "unitless")
+addCatVar(3, "f0", "f(x0)", "unitless")
+addCatVar(3, "fn", "f(xn)", "unitless")
+addCatVar(3, "dx", "Step width", "unitless")
+addCatVar(3, "sumf", "Sum of middle f values", "unitless")
 
 addSubCat(3, 1, "Power Rule Integration", "")
 aF(3, 1, "I=k*(b^(n+1)-a^(n+1))/(n+1)", U("I","k","a","b","n"))
@@ -132,6 +141,10 @@ aF(3, 2, "a=sqrt(b^2-2*I)", U("a","b","I"))
 addSubCat(3, 3, "Exponential Integral", "")
 aF(3, 3, "I=k*(exp(b)-exp(a))", U("I","k","a","b"))
 aF(3, 3, "k=I/(exp(b)-exp(a))", U("k","I","a","b"))
+
+addSubCat(3, 4, "Trapezoidal Rule", "")
+aF(3, 4, "I=dx/2*(f0+2*sumf+fn)", U("I","dx","f0","sumf","fn"))
+aF(3, 4, "dx=2*I/(f0+2*sumf+fn)", U("dx","I","f0","sumf","fn"))
 
 
 addCat(4, "Applications of Calculus", "Related rates, optimization, arc length")
@@ -204,6 +217,7 @@ addCatVar(6, "PAandB", "P(A and B)", "unitless")
 addCatVar(6, "PAorB", "P(A or B)", "unitless")
 addCatVar(6, "PAgB", "P(A|B)", "unitless")
 addCatVar(6, "PBgA", "P(B|A)", "unitless")
+addCatVar(6, "PnotA", "P(not A)", "unitless")
 
 addSubCat(6, 1, "Addition Rule", "")
 aF(6, 1, "PAorB=PA+PB-PAandB", U("PAorB","PA","PB","PAandB"))
@@ -220,6 +234,10 @@ addSubCat(6, 3, "Bayes' Theorem", "")
 aF(6, 3, "PBgA=PAgB*PB/PA", U("PBgA","PAgB","PB","PA"))
 aF(6, 3, "PAgB=PBgA*PA/PB", U("PAgB","PBgA","PA","PB"))
 
+addSubCat(6, 4, "Complements", "")
+aF(6, 4, "PnotA=1-PA", U("PnotA","PA"))
+aF(6, 4, "PA=1-PnotA", U("PA","PnotA"))
+
 
 addCat(7, "Distributions", "Normal, binomial, and sampling distributions")
 
@@ -235,6 +253,7 @@ addCatVar(7, "p", "Probability / proportion", "unitless")
 addCatVar(7, "q", "1-p", "unitless")
 addCatVar(7, "np", "Binomial mean", "unitless")
 addCatVar(7, "npq", "Binomial variance", "unitless")
+addCatVar(7, "lambda", "Poisson mean", "unitless")
 
 addSubCat(7, 1, "Z-Score (Raw)", "")
 aF(7, 1, "z=(x-mu)/sigma", U("z","x","mu","sigma"))
@@ -257,6 +276,9 @@ aF(7, 4, "np=n*p", U("np","n","p"))
 aF(7, 4, "npq=n*p*q", U("npq","n","p","q"))
 aF(7, 4, "q=1-p", U("q","p"))
 aF(7, 4, "p=1-q", U("p","q"))
+
+addSubCat(7, 5, "Poisson Distribution", "")
+aF(7, 5, "np=lambda", U("np","lambda"))
 
 
 addCat(8, "Confidence Intervals", "Margin of error and interval bounds")
@@ -330,3 +352,26 @@ aF(10, 1, "b1=(ybar-b0)/xbar", U("b1","ybar","b0","xbar"))
 aF(10, 1, "ybar=b0+b1*xbar", U("ybar","b0","b1","xbar"))
 aF(10, 1, "b1=r*sy/sx", U("b1","r","sy","sx"))
 aF(10, 1, "r=b1*sx/sy", U("r","b1","sx","sy"))
+
+addCat(11, "Two-Sample Tests", "Comparing two means or proportions")
+
+addCatVar(11, "xbar1", "Sample 1 mean", "unitless")
+addCatVar(11, "xbar2", "Sample 2 mean", "unitless")
+addCatVar(11, "n1", "Sample 1 size", "unitless")
+addCatVar(11, "n2", "Sample 2 size", "unitless")
+addCatVar(11, "s1", "Sample 1 std dev", "unitless")
+addCatVar(11, "s2", "Sample 2 std dev", "unitless")
+addCatVar(11, "sp", "Pooled std dev", "unitless")
+addCatVar(11, "t", "T statistic", "unitless")
+addCatVar(11, "phat1", "Sample 1 proportion", "unitless")
+addCatVar(11, "phat2", "Sample 2 proportion", "unitless")
+addCatVar(11, "phatp", "Pooled proportion", "unitless")
+addCatVar(11, "z", "Z statistic", "unitless")
+
+addSubCat(11, 1, "Two-Sample T (Pooled)", "")
+aF(11, 1, "t=(xbar1-xbar2)/(sp*sqrt(1/n1+1/n2))", U("t","xbar1","xbar2","sp","n1","n2"))
+aF(11, 1, "xbar1=xbar2+t*sp*sqrt(1/n1+1/n2)", U("xbar1","xbar2","t","sp","n1","n2"))
+aF(11, 1, "sp=(xbar1-xbar2)/(t*sqrt(1/n1+1/n2))", U("sp","xbar1","xbar2","t","n1","n2"))
+
+addSubCat(11, 2, "Two-Proportion Z", "")
+aF(11, 2, "z=(phat1-phat2)/sqrt(phatp*(1-phatp)*(1/n1+1/n2))", U("z","phat1","phat2","phatp","n1","n2"))

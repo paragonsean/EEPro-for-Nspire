@@ -2,7 +2,7 @@
 
 # Jim and Adriweb
 
-echo "Building FormulaPro Nspire v1.42b..."
+echo "Building Calc & Stats for TI-Nspire v1.42b..."
 
 echo "Building the database"
 cd 0\ -\ \ Database
@@ -12,7 +12,7 @@ cd 0\ -\ \ Database
 #cd 1\ -\ \ Analysis\ Part
 #./build.sh
 
-echo "Building the FormulaPro core"
+echo "Building the Calc & Stats core"
 cd ..
 cd 2\ -\ \ FormulaPro
 ./build.sh
@@ -30,11 +30,9 @@ cd Global\ Libraries
 cd ..
 
 echo "Creating the whole thing..."
-#cat Database.big.lua lib.big.lua FormulaPro.big.lua Analysis.big.lua Reference.big.lua main.lua > EEPro.big.lua
-cat Database.big.lua lib.big.lua FormulaPro.big.lua Reference.big.lua main.lua > EEPro.big.lua
-mv EEPro.big.lua FormulaPro_fullcode.lua
-luna FormulaPro_fullcode.lua FormulaPro.tns
-cp FormulaPro.tns EEPro.tns
+cat Database.big.lua lib.big.lua FormulaPro.big.lua Reference.big.lua main.lua > CalcStats.big.lua
+mv CalcStats.big.lua FormulaPro_fullcode.lua
+luna FormulaPro_fullcode.lua CalcStats.tns
 
 echo "Done building"
 
