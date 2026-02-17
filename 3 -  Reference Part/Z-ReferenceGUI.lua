@@ -1,14 +1,8 @@
 
 References	= {
-	{title="Resistor color chart"     , info="", screen=ResColor    },
-	{title="Standard Component Values", info="", screen=nil         },
-	{title="Semiconductor Data",        info="", screen=nil         },
-	{title="Boolean Expressions",       info="", screen=RefBoolExpr },
-	{title="Boolean Algebra",           info="", screen=RefBoolAlg  },
-	{title="Transforms",                info="", screen=nil         },
 	{title="Constants",                 info="", screen=RefConstants},
-	{title="SI Prefixes",               info="", screen=SIPrefixes  },
 	{title="Greek Alphabet",            info="", screen=Greek       },
+	{title="SI Prefixes",               info="", screen=SIPrefixes  },
 }
 
 Ref	= WScreen()

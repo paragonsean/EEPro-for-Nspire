@@ -26,7 +26,7 @@ function CategorySel:paint(gc)
     if not kIsInSubCatScreen then
         gc:setColorRGB(0, 0, 0)
         gc:setFont("sansserif", "r", 16)
-        gc:drawString("FormulaPro", self.x + 5, 0, "top")
+        gc:drawString("Calc & Stats", self.x + 5, 0, "top")
 
         gc:setFont("sansserif", "r", 12)
         gc:drawString("v1.42b", self.x + .4 * self.w, 4, "top")

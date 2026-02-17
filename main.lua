@@ -1,14 +1,14 @@
 
 
-aboutWindow	= Dialog("About FormulaPro :", 50, 20, 280, 180)
+aboutWindow	= Dialog("About Calc & Stats :", 50, 20, 280, 180)
 
-local aboutstr	= [[FormulaPro v1.42b
+local aboutstr	= [[Calc & Stats v1.42b
 --------------------
+Calculus and Statistics formulas
 Jim Bauwens, Adrien "Adriweb" Bertrand
 Thanks also to Levak.
 LGPL3 License.
-More info and contact : 
-tiplanet.org  -  inspired-lua.org
+More info: tiplanet.org
 
 
 Tip : Press [Tab] for Reference !]]
@@ -49,7 +49,7 @@ function errorPopup(gc)
 
     errorDialog = Dialog("Oops...", 50, 20, "85", "80")
 
-    local textMessage	= [[FormulaPro has encountered an error
+    local textMessage	= [[Calc & Stats has encountered an error
 -----------------------------
 Sorry for the inconvenience.
 Please report this bug to info@tiplanet.org

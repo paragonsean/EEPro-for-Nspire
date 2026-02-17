@@ -1,4 +1,4 @@
-# FormulaPro (previously "EEPro Nspire").
+# Calc & Stats for TI-Nspire (previously EEPro/FormulaPro).
 
 ### This is a [TI-Planet.org](http://tiplanet.org) project.
 ### Announce topic here : [FR](http://tiplanet.org/forum/viewtopic.php?t=8446) / [EN](http://tiplanet.org/forum/viewtopic.php?f=50&t=8455)
@@ -16,9 +16,7 @@ Many thanks too to Critor, Excale, NeoCrisis ... and TI of course :)
 We welcome everybody, so if you want to help us, contact us by email (see down there)
 
 ## What .... ?
-### Please READ (and comment if you want) this reference document : [Link](https://docs.google.com/document/d/1LBjZiKBB3k_bAIDWjTVRH9zTrX5DUQZ6BOXLhKveqJk/edit).
-
-![The overall organization](http://i.imgur.com/UhHn7.png)
+Calc & Stats is a formula solver for **Calculus** and **Statistics** on TI-Nspire. Enter known values and solve for unknowns across limits, derivatives, integrals, descriptive statistics, probability, distributions, confidence intervals, hypothesis tests, and regression.
  
 The only requirement to run the .tns files is to have an Nspire OS >= 3.0. You can find the latest updates [here](http://education.ti.com). Version 3.9 is preferred to enjoy the latest features, and 3.1/3.6 if you want to keep Ndless.
 
